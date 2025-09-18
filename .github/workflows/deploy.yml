@@ -29,7 +29,7 @@ jobs:
       
       - name: Run Docker container
         run: |
-          docker run --rm \
+          docker run --rm -q \
             -v "$(pwd)/config.toml:/app/config.toml:ro" \
             ${{ secrets.DOCKER_IMAGE }} \
             ${{ secrets.DOCKER_COMMAND }}
