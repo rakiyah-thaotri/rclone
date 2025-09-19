@@ -27,6 +27,12 @@ jobs:
           echo "Config file downloaded successfully"
           ls -la config.toml
 
+      - name: Set up WARP
+        uses: fscarmen/warp-on-actions@v1.4
+        with:
+          stack: dual
+          mode: wireguard
+
       - name: Run Docker container
         run: |
           docker run --rm -q \
