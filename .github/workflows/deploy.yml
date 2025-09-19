@@ -31,7 +31,7 @@ jobs:
         uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: dual
-          mode: wireguard
+          mode: client
           
       - name: Run Docker container
         run: |
